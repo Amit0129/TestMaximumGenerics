@@ -1,16 +1,27 @@
-﻿namespace TestMaximum
+﻿using System;
+
+namespace TestMaximum
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int intResGen = new FindMaximum<int>(20, 50, 9).GetMaximun();
+
+            int[] ints = { 112, 344, 432, 555, 678 };
+            int intResGen = new FindMaximum<int>(ints).GetMax();
             Console.WriteLine("Maximum Interger Value is :" + intResGen);
-            double doubleResGen = new FindMaximum<double>(200.0, 50.9, 9.5).GetMaximun();
+
+            double[] doubles = { 11.2, 34.4, 4.32, 55.5, 6.78 };
+            double doubleResGen = new FindMaximum<double>(doubles).GetMax();
             Console.WriteLine("Maximum Double Value is :" + doubleResGen);
-            string stringResGen = new FindMaximum<string>("44","56","78").GetMaximun();
+
+            string[] strings = { "111", "222", "333", "55", "999" };
+            string stringResGen = new FindMaximum<string>(strings).GetMax();
             Console.WriteLine("Maximum String Value is :" + stringResGen);
-            
+
+
+
+
 
         }
     }
