@@ -4,16 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Initializing Test Maximum Program");
+            FindMaximum maxValue = new FindMaximum();
 
-            int result = FindMaximum.GetMaximumIntNumber(95, 150, 65);
-            Console.WriteLine($"The maxumum number between three integer is : {result}");
-
-            double doubleResult = FindMaximum.GetMaximumFloatNumber(11.5, 11.6, 11.7);
-            Console.WriteLine($"The maxumum number between three integer is : {doubleResult}");
-
-            string stringResult = FindMaximum.GetMaximumString("12", "11.6", "11.7");
-            Console.WriteLine($"The maxumum number between three integer is : {stringResult}");
+            int intResGen = maxValue.GetMaximun<int>(10,78,90);
+            Console.WriteLine("Maximum Interger Value is :" + intResGen);
+            double doubleResGen = maxValue.GetMaximun<double>(11.4, 89.67, 98.5);
+            Console.WriteLine("Maximum Double Value is :" + doubleResGen);
+            string stringResGen = maxValue.GetMaximun<string>("456","946","657");
+            Console.WriteLine("Maximum String is :" + stringResGen);
         }
     }
 }
